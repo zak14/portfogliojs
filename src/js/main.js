@@ -11,3 +11,15 @@ console.log(element);
 console.log(element.innerText);
 element.innerText = "ceci est le contenu modifier en js";
 console.log(element.innerText);
+
+//exo 3
+
+
+//recuperer les element dont on va se servir
+let btn = document.querySelector("#first-event");
+//ecrire les fonctionnalites
+let direbonjour = function () {
+    console.log("on me click");
+}
+//ecouter les evenement provoque par l'utilisateur ou autre
+btn.addEventListener('click', direbonjour);
