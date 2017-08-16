@@ -88,13 +88,28 @@ console.log(element.innerText);
 
 
 //recuperer les element dont on va se servir
-var btn = document.querySelector("#first-event");
+var btn3 = document.querySelector("#first-event");
 //ecrire les fonctionnalites
 var direbonjour = function direbonjour() {
     console.log("on me click");
 };
 //ecouter les evenement provoque par l'utilisateur ou autre
-btn.addEventListener('click', direbonjour);
+btn3.addEventListener('click', direbonjour);
+
+//exo 4
+//recuperer les element dont on va se servir
+var inputchanger = document.querySelector("#title-content");
+var btn4 = document.querySelector("#change-title");
+var h4Exo4 = document.querySelector("#title-to-change");
+//ecrire les fonctionnalites
+var changerTitre = function changerTitre() {
+    //prendre le contenu de l'input
+    var newTitle = inputchanger.value;
+    //mettre le contenu dans le h4
+    h4Exo4.innerText = newTitle;
+};
+//ecouter les evenement provoque par l'utilisateur ou autre
+btn4.addEventListener('click', changerTitre);
 
 /***/ })
 /******/ ]);
