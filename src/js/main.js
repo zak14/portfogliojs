@@ -9,7 +9,7 @@ let element = document.querySelector('#element-to-select');
 //afficher dns la console
 console.log(element);
 console.log(element.innerText);
-element.innerText = "ceci est le contenu modifier en js";
+element.innerText = "Ceci est le contenu modifier en js";
 console.log(element.innerText);
 
 //exo 3
@@ -38,4 +38,3 @@ let changerTitre = function () {
 }
 //ecouter les evenement provoque par l'utilisateur ou autre
 btn4.addEventListener('click', changerTitre);
-

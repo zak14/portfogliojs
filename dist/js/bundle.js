@@ -67,6 +67,14 @@
 /* 0 */
 /***/ (function(module, exports, __webpack_require__) {
 
+__webpack_require__(1);
+module.exports = __webpack_require__(2);
+
+
+/***/ }),
+/* 1 */
+/***/ (function(module, exports, __webpack_require__) {
+
 "use strict";
 
 
@@ -81,7 +89,7 @@ var element = document.querySelector('#element-to-select');
 //afficher dns la console
 console.log(element);
 console.log(element.innerText);
-element.innerText = "ceci est le contenu modifier en js";
+element.innerText = "Ceci est le contenu modifier en js";
 console.log(element.innerText);
 
 //exo 3
@@ -110,6 +118,12 @@ var changerTitre = function changerTitre() {
 };
 //ecouter les evenement provoque par l'utilisateur ou autre
 btn4.addEventListener('click', changerTitre);
+
+/***/ }),
+/* 2 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
 
 /***/ })
 /******/ ]);
