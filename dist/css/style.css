@@ -22,3 +22,5 @@ section {
     color: white;
     padding: 15px 32px;
     font-size: 16px; }
+  section .error {
+    background-color: #fe050c; }

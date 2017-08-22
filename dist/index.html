@@ -7,101 +7,153 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="./css/style.css">
-
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 
 <body>
-    <header>
 
-        <nav class="navbar navbar-default" role="navigation">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="#">Title</a>
-            </div>
-
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse navbar-ex1-collapse">
-                <ul class="nav navbar-nav">
-                    <li class="active"><a href="#">Link</a></li>
-                    <li><a href="#">Link</a></li>
-                </ul>
-                <form class="navbar-form navbar-left" role="search">
-                    <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Search">
-                    </div>
-                    <button type="submit" class="btn btn-default">Submit</button>
-                </form>
-                <ul class="nav navbar-nav navbar-right">
-                    <li><a href="#">Link</a></li>
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="#">Action</a></li>
-                            <li><a href="#">Another action</a></li>
-                            <li><a href="#">Something else here</a></li>
-                            <li><a href="#">Separated link</a></li>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
-            <!-- /.navbar-collapse -->
-        </nav>
-
-
-    </header>
-    <div class="container">
-        <ul class="nav nav-tabs" role="tablist">
-            <li class="active" role="presentation"><a data-toggle="tab" href="#exo-1">exo 1</a></li>
-            <li role="presentation"><a aria-controls="settings" role="tab" data-toggle="tab" href="#exo-2">exo 2</a></li>
-            <li role="presentation"><a aria-controls="settings" role="tab" data-toggle="tab" href="#exo-3">exo 3</a></li>
-            <li role="presentation"><a aria-controls="settings" role="tab" data-toggle="tab" href="#exo-4">exo 4</a></li>
-        </ul>
-        <div class="tab-content">
-            <section id="exo-1" role="tabpanel" class="tab-pane active">
-                <h1>Dire bonjours dans la console</h1>
-                <p> Définir une variable avec un objet string et l'afficher dan la console.</p>
-                <div class="exo"></div>
-            </section>
-
-            <section id="exo-2" role="tabpanel" class="tab-pane">
-                <h1>Sélectionner un élément du DOM</h1>
-                <p>Afficher dans la console un élément du DOM. Et sa propriété texte.</p>
-                <div class="exo">
-                    <h4 id="element-to-select">Select me</h4>
-                </div>
-            </section>
-
-            <section id="exo-3" role="tabpanel" class="tab-pane">
-                <h1>Capturer un evenement du DOM</h1>
-                <p>Ajouter un écouteur d'évènement à un bouton</p>
-                <div class="exo">
-                    <button id="first-event">Click me</button>
-                </div>
-            </section>
-
-            <section id="exo-4" role="tabpanel" class="tab-pane">
-                <h1>Remplacer le contenu d'un élément</h1>
-                <p>Mettre le contenu d'un élément input dans un sous-titre lorsque l'on clique sur un bouton</p>
-                <div class="exo">
-                    <h4 id="title-to-change">...en attente</h4>
-                    <input type="text" id="title-content">
-                    <button id="change-title">Click me</button>
-                </div>
-            </section>
+    <nav class="navbar navbar-default" role="navigation">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">Title</a>
         </div>
 
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="#">Link</a></li>
+                <li><a href="#">Link</a></li>
+            </ul>
+            <form class="navbar-form navbar-left" role="search">
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Search">
+                </div>
+                <button type="submit" class="btn btn-default">Submit</button>
+            </form>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#">Link</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Action</a></li>
+                        <li><a href="#">Another action</a></li>
+                        <li><a href="#">Something else here</a></li>
+                        <li><a href="#">Separated link</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </nav>
 
+
+    <div class="container">
+        <!-- Nav tabs -->
+        <ul class="nav nav-tabs" role="tablist">
+            <li role="presentation" class="active"><a href="#exo-1" aria-controls="exo-1" role="tab" data-toggle="tab">exo-1</a></li>
+            <li role="presentation"><a href="#exo-2" aria-controls="exo-2" role="tab" data-toggle="tab">exo-2</a></li>
+            <li role="presentation"><a href="#exo-3" aria-controls="exo-3" role="tab" data-toggle="tab">exo-3</a></li>
+            <li role="presentation"><a href="#exo-4" aria-controls="exo-4" role="tab" data-toggle="tab">exo-4</a></li>
+            <li role="presentation"><a href="#exo-5" aria-controls="exo-5" role="tab" data-toggle="tab">exo-5</a></li>
+            <li role="presentation"><a href="#exo-6" aria-controls="exo-6" role="tab" data-toggle="tab">exo-6</a></li>
+            <li role="presentation"><a href="#exo-7" aria-controls="exo-7" role="tab" data-toggle="tab">exo-7</a></li>
+            <li role="presentation"><a href="#exo-8" aria-controls="exo-8" role="tab" data-toggle="tab">exo-8</a></li>
+        </ul>
+        <!-- Tab panes -->
+        <div class="tab-content">
+            <section role="tabpanel" class="tab-pane active" id="exo-1">
+                <h1>Dire bonjour dans la console</h1>
+                <p>définir une variable avec un objet string et l'afficher dans la console.</p>
+                <div class="exo"></div>
+                <div class="console"></div>
+            </section>
+
+            <section role="tabpanel" class="tab-pane" id="exo-2">
+                <h1>Selectionner un élément du DOM</h1>
+                <p>Afficher dans la console un élément du DOM et sa propriété texte. Puis changer son contenu texte</p>
+                <div class="exo">
+                    <h4 id="element-to-select" class="bg-success">Select me</h4>
+                </div>
+            </section>
+
+            <section role="tabpanel" class="tab-pane" id="exo-3">
+                <h1>Capturer un événement du DOM</h1>
+                <p>Ajouter un écouteur d'événement à un bouton qui affiche un message dans la console</p>
+                <div class="exo">
+                    <button class="btn btn-success" id="first-event">Click me!</button>
+                </div>
+            </section>
+
+            <section role="tabpanel" class="tab-pane" id="exo-4">
+                <h1>Remplacer le contenu d'un élémént</h1>
+                <p>Mettre le contenu d'un élément input dans un sous-titre lorsque l'on clique sur un bouton</p>
+                <div class="exo form-inline">
+                    <h4 id="title-to-change">...En attente</h4>
+                    <input class="form-control" type="text" id="title-content">
+                    <button class="btn btn-success" id="change-title">Click me!</button>
+                </div>
+            </section>
+
+            <section role="tabpanel" class="tab-pane" id="exo-5">
+                <h1>Vérifier la valeur de l'input</h1>
+                <p>Vérifier si l'input est bien rempli</p>
+                <div class="exo form-inline">
+                    <h4 id="title-to-change">...En attente</h4>
+                    <input class="form-control" type="text" id="title-content">
+                    <button class="btn btn-success" id="change-title">Click me!</button>
+                </div>
+            </section>
+
+            <section role="tabpanel" class="tab-pane form-inline" id="exo-6">
+                <h1>Création d'un élémént du DOM en javascript</h1>
+                <p>Ajouter un élément li dans un ul au click d'un bouton</p>
+                <input type="text" class="form-control">
+                <button class="btn btn-success">Ajouter élément</button>
+                <ul class="list-group"></ul>
+            </section>
+
+            <section role="tabpanel" class="tab-pane form-inline" id="exo-7">
+                <h1>Suppression d'un élément du DOM</h1>
+                <p>Supprimer des boutons lorsque l'on click dessus</p>
+                <button class="btn btn-warning">Delete me</button>
+                <button class="btn btn-warning">Delete me</button>
+                <button class="btn btn-warning">Delete me</button>
+                <button class="btn btn-warning">Delete me</button>
+                <button class="btn btn-warning">Delete me</button>
+            </section>
+
+            <section role="tabpanel" class="tab-pane form-inline" id="exo-8">
+                <h1>Calcolatrice JS</h1>
+                <p></p>
+                <input class="form-control" type="text" id="title-content1">
+                <select id="operatore">
+  <option value="+">+</option>
+  <option value="-">-</option>
+  <option value="*">*</option>
+  <option value="/">/</option>
+</select>
+                <input class="form-control" type="text" id="title-content2">
+                <button class="btn btn-success" id="change-title">=</button>
+
+                <button class="btn btn-success" id="cancella">C</button>
+
+
+                <p id="risultato"> Somme.....</p>
+
+            </section>
+
+
+        </div>
     </div>
     <script src="../node_modules/jquery/dist/jquery.min.js"></script>
     <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script src="./js/bundle.js"></script>
+    <script src="js/bundle.js"></script>
 </body>
 
 </html>

@@ -68,7 +68,7 @@
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(1);
-module.exports = __webpack_require__(2);
+module.exports = __webpack_require__(3);
 
 
 /***/ }),
@@ -78,49 +78,120 @@ module.exports = __webpack_require__(2);
 "use strict";
 
 
-//définir une phrase d'accueil
-var phrase = "Bonjours tout le monde";
-//faire apparaitre le contnu de la variable phrase dans la console
-console.log(phrase);
-
-//exo 2
-//selectionner un element
-var element = document.querySelector('#element-to-select');
-//afficher dns la console
-console.log(element);
-console.log(element.innerText);
-element.innerText = "Ceci est le contenu modifier en js";
-console.log(element.innerText);
-
-//exo 3
-
-
-//recuperer les element dont on va se servir
-var btn3 = document.querySelector("#first-event");
-//ecrire les fonctionnalites
-var direbonjour = function direbonjour() {
-    console.log("on me click");
-};
-//ecouter les evenement provoque par l'utilisateur ou autre
-btn3.addEventListener('click', direbonjour);
-
-//exo 4
-//recuperer les element dont on va se servir
-var inputchanger = document.querySelector("#title-content");
-var btn4 = document.querySelector("#change-title");
-var h4Exo4 = document.querySelector("#title-to-change");
-//ecrire les fonctionnalites
-var changerTitre = function changerTitre() {
-    //prendre le contenu de l'input
-    var newTitle = inputchanger.value;
-    //mettre le contenu dans le h4
-    h4Exo4.innerText = newTitle;
-};
-//ecouter les evenement provoque par l'utilisateur ou autre
-btn4.addEventListener('click', changerTitre);
+__webpack_require__(2);
 
 /***/ }),
 /* 2 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var section8 = document.querySelector('#exo-8');
+var inputA = section8.querySelector('#title-content1');
+var inputB = section8.querySelector('#title-content2');
+var button = section8.querySelector('button');
+var somme = section8.querySelector('#risultato');
+var operatore = section8.querySelector('#operatore');
+var bottoneC = section8.querySelector('#cancella');
+
+var controlla = function controlla(x) {
+
+    if (x.value == "" || isNaN(x.value)) {
+        if (x.value == "") {
+            x.classList.add("error");
+            x.value = "Champ obligatoire";
+            // Enlever le focus de l'élément actif
+            x.blur();
+        } else if (isNaN(x.value)) {
+            x.classList.add("error");
+            x.value = "Error char";
+            // Enlever le focus de l'élément actif
+            x.blur();
+        }
+    }
+};
+
+var Ccarattere = function Ccarattere() {
+
+    // Définition d'un expression régulière
+    var reg = /^-?[0-9]*\.?[0-9]*$/;
+    // Vérifier si la valeur est bien un nombre
+    while (!reg.test(this.value)) {
+        // Récupérer la longeur de la chaine de caractère
+        var Ltesto = this.value.length;
+        // Enlever le dernier cractère
+        this.value = this.value.substr(0, Ltesto - 1);
+    }
+};
+var plus = function plus() {
+
+    controlla(inputA);
+    controlla(inputB);
+
+    if (inputA.classList.contains('error') || inputB.classList.contains('error')) {
+        return false;
+    }
+
+    var a = parseInt(inputA.value);
+    var b = parseInt(inputB.value);
+    var c = void 0;
+    switch (operatore.value) {
+        case '+':
+            c = a + b;
+            break;
+        case '-':
+            c = a - b;
+            break;
+        case '*':
+            c = a * b;
+            break;
+        case '/':
+            c = a / b;
+            break;
+
+    }
+
+    somme.innerText = c;
+};
+
+var viderChamp = function viderChamp(e) {
+    // Vérifier si le champ est en error
+    if (inputA.classList.contains('error') || inputB.classList.contains('error')) {
+        // Vider la value
+        if (inputA.classList.contains('error')) {
+            inputA.value = "";
+            // Retirer la class error
+            inputA.classList.remove('error');
+        }
+
+        if (inputB.classList.contains('error')) {
+            inputB.value = "";
+            // Retirer la class error
+            inputB.classList.remove('error');
+        }
+    }
+};
+
+var vidertout = function vidertout() {
+    inputA.value = "";
+    // Retirer la class error
+    inputA.classList.remove('error');
+
+    inputB.value = "";
+    // Retirer la class error
+    inputB.classList.remove('error');
+};
+
+button.addEventListener('click', plus);
+inputA.addEventListener('click', viderChamp);
+inputB.addEventListener('click', viderChamp);
+bottoneC.addEventListener('click', vidertout);
+inputA.addEventListener('keyup', Ccarattere);
+inputB.addEventListener('keyup', Ccarattere);
+
+/***/ }),
+/* 3 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin

@@ -1,0 +1,10 @@
+section {
+  background-color: #bbdefb;
+  padding: 15px; }
+  section h1 {
+    background-color: #9CCC65;
+    padding: 15px;
+    color: white; }
+
+.error {
+  border-color: red; }
