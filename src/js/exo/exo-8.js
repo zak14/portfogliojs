@@ -40,6 +40,7 @@ let Ccarattere = function () {
     }
 
 }
+
 let plus = function () {
 
 
@@ -94,14 +95,14 @@ let viderChamp = function (e) {
 }
 
 
-let vidertout = function () {
-    inputA.value = "";
-    // Retirer la class error
-    inputA.classList.remove('error');
+// let vidertout = function () {
+inputA.value = "";
+// Retirer la class error
+inputA.classList.remove('error');
 
-    inputB.value = "";
-    // Retirer la class error
-    inputB.classList.remove('error');
+inputB.value = "";
+// Retirer la class error
+inputB.classList.remove('error');
 }
 
 
